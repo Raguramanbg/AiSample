@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.aipractice'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    implementation 'dev.langchain4j:langchain4j:0.35.0'
+    implementation "dev.langchain4j:langchain4j-ollama:0.31.0"
+    implementation "dev.langchain4j:langchain4j-embeddings-all-minilm-l6-v2:0.35.0"
+}
+
+test {
+    useJUnitPlatform()
+}
